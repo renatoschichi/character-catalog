@@ -3,33 +3,33 @@ import styled from 'styled-components';
 import { CharacterResponse } from '../types/CharacterResponse';
 import Character from './Character';
 
-interface CharactersListProps {
-  characters?: CharacterResponse[];
+interface FavoritesListProps {
   favorites: CharacterResponse[];
   onFavoriteToggle: (character: CharacterResponse) => void;
 }
 
-const CharactersListContainer = styled.div`
+const FavoritesListContainer = styled.div`
+  margin: 20px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 20px;
 `;
 
-function CharactersList(props: CharactersListProps) {
-  const { characters, favorites, onFavoriteToggle } = props;
+function FavoritesList(props: FavoritesListProps) {
+  const { favorites, onFavoriteToggle } = props;
 
   return (
-    <CharactersListContainer>
-      {characters?.map(character => (
+    <FavoritesListContainer>
+      {favorites.map(character => (
         <Character
           key={character.id}
           character={character}
-          isFavorite={favorites.includes(character)}
           onFavoriteToggle={() => onFavoriteToggle(character)}
+          isFavorite
         />
       ))}
-    </CharactersListContainer>
+    </FavoritesListContainer>
   );
 }
 
-export default CharactersList;
+export default FavoritesList;
