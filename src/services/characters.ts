@@ -52,9 +52,9 @@ interface CharacterResponse {
   created: string;
 }
 
-export async function searchCharacters(): Promise<Character[]> {
-  const response = await axios.get<CharactersResponse>('https://rickandmortyapi.com/api/character');
-  return response.data.results;
+export async function searchCharacters(page: number): Promise<CharactersResponse> {
+  const response = await axios.get<CharactersResponse>(`https://rickandmortyapi.com/api/character?page=${page}`);
+  return response.data;
 }
 
 export async function getCharacterById(id: number): Promise<CharacterResponse> {
