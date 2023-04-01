@@ -15,20 +15,27 @@ const FavoritesListContainer = styled.div`
   grid-gap: 20px;
 `;
 
+const FavoritesTitle = styled.div`
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding: 20px;
+`;
+
 function FavoritesList(props: FavoritesListProps) {
   const { favorites, onFavoriteToggle } = props;
 
   return (
-    <FavoritesListContainer>
+    <><FavoritesTitle>Lista de personagens favoritos</FavoritesTitle><FavoritesListContainer>
       {favorites.map(character => (
         <Character
           key={character.id}
           character={character}
           onFavoriteToggle={() => onFavoriteToggle(character)}
-          isFavorite
-        />
+          isFavorite />
       ))}
-    </FavoritesListContainer>
+    </FavoritesListContainer></>
   );
 }
 

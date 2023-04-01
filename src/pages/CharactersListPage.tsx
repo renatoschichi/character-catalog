@@ -15,6 +15,13 @@ const CharactersListContainer = styled.div`
   padding: 20px;
 `;
 
+const ListTitle = styled.div`
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 20px;
+`;
+
 function CharactersListPage(props: CharactersListPageProps) {
   const { favorites, onFavoriteToggle } = props;
   const [page, setPage] = useState<number>(1);
@@ -46,7 +53,7 @@ function CharactersListPage(props: CharactersListPageProps) {
 
   return (
     <CharactersListContainer>
-      <h1>Lista de personagens</h1>
+      <ListTitle>Lista de personagens</ListTitle>
       <CharactersList characters={characters?.results} favorites={favorites} onFavoriteToggle={onFavoriteToggle} />
       <Pagination currentPage={page} totalPages={characters?.info?.pages ?? 0} onPageChange={handlePageChange} />
     </CharactersListContainer>
