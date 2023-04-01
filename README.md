@@ -1,46 +1,31 @@
-# Getting Started with Create React App
+Rick and Morty Characters Catalog
+This project consists of a web application that displays a list of characters from the Rick and Morty series. The list is powered by the Rick and Morty API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+On the initial screen of the application, it is possible to view the list of characters, with the possibility to favorite each one of them. The list has pagination, for better navigation between the characters.
 
-## Available Scripts
+The application is responsive, adapting to different screen sizes. Application routes are defined using the React Router.
 
-In the project directory, you can run:
+The list of characters is consumed through a custom hook, created using the React Query library. The hook is responsible for fetching data from the API and managing the state of the list of characters.
 
-### `npm start`
+To improve code organization and increase component reusability, functional components were used. In addition, the code was written in TypeScript, ensuring greater robustness and security in typing.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project has layout and integration tests, using the React Testing Library and Jest libraries.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+For styling the application, the Styled Components library was used.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+How to run the project
+Clone the repository on your machine.
+Access the project folder through the terminal.
+Install the project's dependencies using the npm install command.
+To start the project in development mode, run the npm start command.
+Access the application in your browser through the address http://localhost:3000.
+How to run the tests
+Access the project folder through the terminal.
+Run the npm test command to run the tests. Layout and integration tests will be performed next.
+Libraries used
+React
+React Query
+React Router
+Styled Components
+React TestingLibrary
+Jest
